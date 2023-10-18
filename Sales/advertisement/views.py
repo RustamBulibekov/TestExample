@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView
+from django.shortcuts import render,reverse
+from django.views.generic import TemplateView, ListView, DetailView, edit
 from .models import Advertisement, Rubric
 
 # Create your views here.
@@ -18,3 +18,8 @@ class MyOwnDetailView(DetailView):
         context['rubric'] = Rubric.objects.all()
 
 
+class MyOwnCreat(edit.CreateView):
+    #form_class =
+    # template_name =
+    # success_url = reverse('main')
+    pass
